@@ -5,18 +5,19 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "usuarios")
-public class Usuario {
+@Table(name = "productos")
+public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true)
-    private String email;
-
     @Column(nullable = false)
     private String nombre;
 
+    private String descripcion;
+
     @Column(nullable = false)
-    private String contraseña;
+    private Double precio;
+
+    private String categoria;
 }
